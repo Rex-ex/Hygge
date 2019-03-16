@@ -1,0 +1,70 @@
+@import "_letStyles";
+@import "_animations_mxn";
+
+#logoZMA{
+  // XS
+  width:  26rem;
+  height: 26rem;
+  // MD
+  @include respond-above(sm){
+  width:  26rem;
+  height: 26rem;
+  }
+  // LG
+  @include respond-above(lg){
+  width:  26rem;
+  height: 26rem;
+  }
+  // LOVE
+  .letterAnim{
+    fill: $logoColor;
+    stroke: $logoColor;
+    stroke-dasharray: 1800;
+    opacity: 1;
+    @include animation(step, 3s, cubic-bezier(0,.23,1,.1));
+    @keyframes step{
+      0%{
+        fill: none;
+        stroke-dashoffset:1800;
+        opacity: 0;
+      }
+      30%{
+        fill: none;
+        stroke-dashoffset:1800;
+        opacity: 1;
+      }
+      90%{
+        fill: $logoColor-NotA;
+      }
+      100%{
+        fill: $logoColor;
+        stroke-dashoffset: 0;
+      }
+    }
+  }
+  // ZMA & ANE
+  .letterAppear{
+    fill: #000;
+    stroke: #000;
+    opacity: 1;
+    @include animation(stepAppear, 3.8s, ease-in);
+    @keyframes stepAppear{
+      0%{
+        opacity: 0;
+      }
+      80%{
+        opacity: 0.01;
+      }
+      100%{
+        opacity: 1;
+      }
+    }
+  }
+  #logoBorder{
+    fill:none;
+    stroke:#000;
+    stroke-width:10;
+    opacity:1;
+  @include animation(stepAppear, 4s, ease-in);
+  }
+}

@@ -1,0 +1,54 @@
+@import "compass";
+@import "compass/reset";
+@import "_media-queries_mxn";
+@import "flexbox_mxn";
+@import "_hyggeLogo";
+@import "_letStyles";
+@import "_boxsizing";
+@import "test_rwd";
+
+html{
+  height: 100%;
+}
+#jumbo{
+  display: flex;
+  height: 120vh;
+  justify-content: center;
+  align-items: center;  
+  // XS
+  background-image: url("../img/woodTableXS.jpg");
+  // MD
+  @include respond-above(sm){
+  background-image: url("../img/woodTableMD.jpg");
+  }
+  // LG
+  @include respond-above(lg){
+  background-image: url("../img/woodTableLG.jpg");
+  }
+  background-size: cover;
+
+  #logoContainer{
+    flex-direction:column;
+    // align-items: baseline;
+    padding-bottom: 6rem;
+  }
+}
+#gallery{
+  position: relative;
+  height: 100vh;
+  background:$logoColor; 
+  // background: pink; 
+}
+
+#gallery::before{
+  content: "";
+  position: absolute;
+  top: -20vh;
+  right: 0;
+  width: 100%;
+  height: 20vh;
+  background-image: url("../img/corner.svg");
+  // background-size: contain;
+  background-repeat: no-repeat;
+  // outline: 1px red solid;
+}
