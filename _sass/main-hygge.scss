@@ -10,6 +10,7 @@
 html{
   height: 100%;
 }
+//#1
 #jumbo{
   display: flex;
   height: 120vh;
@@ -34,7 +35,7 @@ html{
     // outline: 3px solid green;
   }
 }
-
+//#2
 .cardContainer{
   // height: 80rem;
   min-height: 40rem;
@@ -52,7 +53,7 @@ html{
   align-items:center;
   text-align: center;
 }
-
+//#2.1
 #welcome{
 
   background:$logoColor;
@@ -73,14 +74,14 @@ html{
 
   }
 }
-
+//#2.2
 #gallery{
   background: pink;
   & #photos{
-    
+
   }
 }
-
+//#2.3
 #productInfo{
   background: lightblue;
 
@@ -88,7 +89,7 @@ html{
 
   }
 }
-
+//#2.4
 #contact{
   background: grey;
   & #information{
