@@ -1,7 +1,7 @@
 @import "compass";
 @import "compass/reset";
 @import "_media-queries_mxn";
-@import "flexbox_mxn";
+@import "_flexbox_mxn";
 @import "_hyggeLogo";
 @import "_letStyles";
 @import "_boxsizing";
@@ -14,11 +14,11 @@ html{
   display: flex;
   height: 120vh;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   // XS
   background-image: url("../img/woodTableXS.jpg");
   // MD
-  @include respond-above(sm){
+  @include respond-above(md){
   background-image: url("../img/woodTableMD.jpg");
   }
   // LG
@@ -27,29 +27,71 @@ html{
   }
   background-size: cover;
 
-  #logoContainer{
+  & #logoContainer{
     flex-direction:column;
     // align-items: baseline;
     padding-bottom: 6rem;
     // outline: 3px solid green;
   }
 }
-#gallery{
-  position: relative;
-  height: 100vh;
-  background:$logoColor; 
-  // background: pink; 
+
+.cardContainer{
+  // height: 80rem;
+  min-height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Raleway', sans-serif, 'Calibri';
+  font-size: 2rem;
+  font-weight: bold;
+}
+.centeredContent{
+  width: 50%;
+  // height: 50%;
+  flex-direction:column;
+  align-items:center;
+  text-align: center;
 }
 
-#gallery::before{
-  content: "";
-  position: absolute;
-  top: -20vh;
-  right: 0;
-  width: 100%;
-  height: 20vh;
-  background-image: url("../img/corner.svg");
-  // background-size: contain;
-  background-repeat: no-repeat;
-  // outline: 1px red solid;
+#welcome{
+
+  background:$logoColor;
+  // position: relative;
+    // & #welcomeDesc::before{
+  //   content: "";
+  //   position: absolute;
+  //   top: -20vh;
+  //   right: 0;
+  //   width: 100%;
+  //   height: 20vh;
+  //   background-image: url("../img/corner.svg");
+  //   // background-size: contain;
+  //   background-repeat: no-repeat;
+  //   // outline: 1px red solid;
+  // }
+  & #desc{
+
+  }
+}
+
+#gallery{
+  background: pink;
+  & #photos{
+    
+  }
+}
+
+#productInfo{
+  background: lightblue;
+
+  & #wash{
+
+  }
+}
+
+#contact{
+  background: grey;
+  & #information{
+
+  }
 }
