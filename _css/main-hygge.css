@@ -266,6 +266,10 @@ html {
 }
 
 #jumbo {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   height: 120vh;
   justify-content: center;
@@ -293,6 +297,10 @@ html {
 
 .cardContainer {
   min-height: 40rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -302,10 +310,18 @@ html {
 }
 
 .centeredContent {
-  width: 50%;
+  width: 90%;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  line-height: 2rem;
+}
+
+@media (min-width: 1200px) {
+  .centeredContent {
+    width: 50%;
+    line-height: 5rem;
+  }
 }
 
 #welcome {
