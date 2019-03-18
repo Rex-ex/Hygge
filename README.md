@@ -8,7 +8,7 @@ I am currently working on this project | WWW=>Work in Progress
 * [Technologies](#Technologies)
 * [Setup](#Setup)
 
-# Project:
+## Project:
 zmaLOVEane 
 (code name: Hygge)
 
