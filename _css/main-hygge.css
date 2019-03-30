@@ -271,26 +271,26 @@ html {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  height: 120vh;
+  height: 100vh;
   justify-content: center;
   align-items: center;
   background-image: url("../img/woodTableXS.jpg");
   background-size: cover;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 576px) {
   #jumbo {
     background-image: url("../img/woodTableMD.jpg");
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   #jumbo {
     background-image: url("../img/woodTableLG.jpg");
   }
 }
 
-#jumbo #logoContainer {
+#jumbo#logoContainer {
   flex-direction: column;
   padding-bottom: 6rem;
 }

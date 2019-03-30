@@ -13,22 +13,22 @@ html{
 //#1
 #jumbo{
   @include flexbox();
-  height: 120vh;
+  height: 100vh;
   justify-content: center;
   align-items: center;
   // XS
   background-image: url("../img/woodTableXS.jpg");
   // MD
-  @include respond-above(md){
+  @include respond-above(xs){
   background-image: url("../img/woodTableMD.jpg");
   }
   // LG
-  @include respond-above(lg){
+  @include respond-above(md){
   background-image: url("../img/woodTableLG.jpg");
   }
   background-size: cover;
 
-  & #logoContainer{
+  &#logoContainer{
     flex-direction:column;
     // align-items: baseline;
     padding-bottom: 6rem;
