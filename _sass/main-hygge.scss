@@ -2,6 +2,7 @@
 @import "compass/reset";
 @import "_media-queries_mxn";
 @import "_flexbox_mxn";
+@import "_gridCSSLayout_mxn";
 @import "_hyggeLogo";
 @import "_letStyles";
 @import "_boxsizing";
@@ -17,14 +18,14 @@ html{
   justify-content: center;
   align-items: center;
   // XS
-  background-image: url("../img/woodTableXS.jpg");
+  background-image: url("../img/logo/woodTableXS.jpg");
   // MD
   @include respond-above(xs){
-  background-image: url("../img/woodTableMD.jpg");
+  background-image: url("../img/logo/woodTableMD.jpg");
   }
   // LG
   @include respond-above(md){
-  background-image: url("../img/woodTableLG.jpg");
+  background-image: url("../img/logo/woodTableLG.jpg");
   }
   background-size: cover;
 
@@ -34,6 +35,7 @@ html{
     padding-bottom: 6rem;
     // outline: 3px solid green;
   }
+  // PART: _hyggeLogo.scss
 }
 //#2
 .cardContainer{

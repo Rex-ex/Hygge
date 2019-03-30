@@ -274,19 +274,19 @@ html {
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background-image: url("../img/woodTableXS.jpg");
+  background-image: url("../img/logo/woodTableXS.jpg");
   background-size: cover;
 }
 
 @media (min-width: 576px) {
   #jumbo {
-    background-image: url("../img/woodTableMD.jpg");
+    background-image: url("../img/logo/woodTableMD.jpg");
   }
 }
 
 @media (min-width: 992px) {
   #jumbo {
-    background-image: url("../img/woodTableLG.jpg");
+    background-image: url("../img/logo/woodTableLG.jpg");
   }
 }
 
