@@ -21,7 +21,7 @@ Work in progress...
 ## Technologies:
 * HTML
 * CSS/Sass
-* Javascript
+* Javascript/jQuery
 * Bootstrap (also RWD grid included)
 
 ## Setup
