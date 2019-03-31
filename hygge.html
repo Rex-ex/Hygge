@@ -9,7 +9,9 @@
     <META NAME="robots" CONTENT="noindex,nofollow">
 
     <link rel="stylesheet" href="_css/main-hygge.css"/>
+    <!-- bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="_css/bootstrap.min.css"/>
 
     <!-- photoSwipe CSS-->
     <link rel="stylesheet" href="_css/photoswipe.css">
@@ -77,52 +79,87 @@
 
     <section>
       <div id="gallery" class="cardContainer">
-        <button id="btn">Open Gallery</button>
-        <!-- <div id="accordion" class="panel-group centeredContent">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-                  Collapsible Group 1</a>
-                </h4>
-              </div>
-              <div id="collapse1" class="panel-collapse collapse in">
-                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.</div>
-              </div>
+        <!-- accordian bootstrap -->
+        <div class="accordion" id="accordionExample">
+          <!-- #1 collapse card -->
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Damskie
+                </button>
+              </h5>
             </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-                  Collapsible Group 2</a>
-                </h4>
-              </div>
-              <div id="collapse2" class="panel-collapse collapse">
-                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.</div>
-              </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-                  Collapsible Group 3</a>
-                </h4>
-              </div>
-              <div id="collapse3" class="panel-collapse collapse">
-                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.</div>
-              </div>
-            </div>
-          </div> -->
 
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>S</p>
+                <p>M</p>
+                <p>L</p>
+                <p>XL</p>
+              </div>
+            </div>
+          </div>
+          <!-- #2 collapse card -->
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Męskie
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>S</p>
+                <p>M</p>
+                <p>L</p>
+                <p>XL</p>
+              </div>
+            </div>
+          </div>
+          <!-- #3 collapse card -->
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Ciążowe
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>S</p>
+                <p>M</p>
+                <p>L</p>
+                <p>XL</p>
+              </div>
+            </div>
+          </div>
+          <!-- #4 collapse card -->
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Dziecięce
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>98</p>
+                <p>104</p>
+                <p>110</p>
+                <p>116</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--END accordian bootstrap -->
+
+
+        <button id="btn">Open Gallery</button>
 
 
         <h2>First gallery:</h2>
@@ -279,7 +316,9 @@
 
     <div id="test-RWD"></div>
   </body>
-  <script src="main.js"></script>
+  <!-- <script src="main.js"></script> -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   <!-- photoSwipe JS -->
   <script src="js/photoswipe.min.js"></script>
   <script src="js/photoswipe-ui-default.min.js"></script>
