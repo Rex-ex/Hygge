@@ -16,7 +16,7 @@
   height: 26rem;
   }
   // LOVE
-  .letterAnim{
+  & .letterAnim{
     fill: $logoColor;
     stroke: $logoColor;
     stroke-dasharray: 1800;
@@ -43,7 +43,7 @@
     }
   }
   // ZMA & ANE
-  .letterAppear{
+  & .letterAppear{
     fill: #000;
     stroke: #000;
     opacity: 1;
@@ -60,7 +60,7 @@
       }
     }
   }
-  #logoBorder{
+  & #logoBorder{
     fill:none;
     stroke:#000;
     stroke-width:10;

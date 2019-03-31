@@ -266,33 +266,41 @@ html {
 }
 
 #jumbo {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  height: 120vh;
+  height: 100vh;
   justify-content: center;
   align-items: center;
-  background-image: url("../img/woodTableXS.jpg");
+  background-image: url("../img/logo/woodTableXS.jpg");
   background-size: cover;
+}
+
+@media (min-width: 576px) {
+  #jumbo {
+    background-image: url("../img/logo/woodTableMD.jpg");
+  }
 }
 
 @media (min-width: 992px) {
   #jumbo {
-    background-image: url("../img/woodTableMD.jpg");
+    background-image: url("../img/logo/woodTableLG.jpg");
   }
 }
 
-@media (min-width: 1200px) {
-  #jumbo {
-    background-image: url("../img/woodTableLG.jpg");
-  }
-}
-
-#jumbo #logoContainer {
+#jumbo#logoContainer {
   flex-direction: column;
   padding-bottom: 6rem;
 }
 
 .cardContainer {
   min-height: 40rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -302,10 +310,18 @@ html {
 }
 
 .centeredContent {
-  width: 50%;
+  width: 90%;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  line-height: 2rem;
+}
+
+@media (min-width: 1200px) {
+  .centeredContent {
+    width: 50%;
+    line-height: 5rem;
+  }
 }
 
 #welcome {

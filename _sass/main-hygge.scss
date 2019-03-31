@@ -2,6 +2,7 @@
 @import "compass/reset";
 @import "_media-queries_mxn";
 @import "_flexbox_mxn";
+@import "_gridCSSLayout_mxn";
 @import "_hyggeLogo";
 @import "_letStyles";
 @import "_boxsizing";
@@ -12,34 +13,35 @@ html{
 }
 //#1
 #jumbo{
-  display: flex;
-  height: 120vh;
+  @include flexbox();
+  height: 100vh;
   justify-content: center;
   align-items: center;
   // XS
-  background-image: url("../img/woodTableXS.jpg");
+  background-image: url("../img/logo/woodTableXS.jpg");
   // MD
-  @include respond-above(md){
-  background-image: url("../img/woodTableMD.jpg");
+  @include respond-above(xs){
+  background-image: url("../img/logo/woodTableMD.jpg");
   }
   // LG
-  @include respond-above(lg){
-  background-image: url("../img/woodTableLG.jpg");
+  @include respond-above(md){
+  background-image: url("../img/logo/woodTableLG.jpg");
   }
   background-size: cover;
 
-  & #logoContainer{
+  &#logoContainer{
     flex-direction:column;
     // align-items: baseline;
     padding-bottom: 6rem;
     // outline: 3px solid green;
   }
+  // PART: _hyggeLogo.scss
 }
 //#2
 .cardContainer{
   // height: 80rem;
   min-height: 40rem;
-  display: flex;
+  @include flexbox();
   justify-content: center;
   align-items: center;
   font-family: 'Raleway', sans-serif, 'Calibri';
@@ -47,15 +49,19 @@ html{
   font-weight: bold;
 }
 .centeredContent{
-  width: 50%;
-  // height: 50%;
+  width: 90%;
   flex-direction:column;
   align-items:center;
   text-align: center;
+  line-height: 2rem;
+
+  @include respond-above(lg){
+  width: 50%;
+  line-height: 5rem;
+  }
 }
 //#2.1
 #welcome{
-
   background:$logoColor;
   // position: relative;
     // & #welcomeDesc::before{
