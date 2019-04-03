@@ -265,6 +265,15 @@ html {
   height: 100%;
 }
 
+.wrapper {
+  width: 100%;
+}
+
+.wrapper a, .wrapper a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 #jumbo {
   display: -webkit-box;
   display: -moz-box;
@@ -290,7 +299,7 @@ html {
   }
 }
 
-#jumbo#logoContainer {
+#jumbo #logoContainer {
   flex-direction: column;
   padding-bottom: 6rem;
 }
@@ -329,7 +338,28 @@ html {
 }
 
 #gallery {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: pink;
+}
+
+#gallery #Myaccordion {
+  width: 30%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#gallery #photos {
+  width: 70%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 #productInfo {

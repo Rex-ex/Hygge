@@ -7,9 +7,18 @@
 @import "_letStyles";
 @import "_boxsizing";
 @import "test_rwd";
-
+// #0
 html{
   height: 100%;
+}
+.wrapper{
+  width: 100%;
+  a, a:hover{
+    text-decoration: none;
+    color:inherit;
+  }
+
+
 }
 //#1
 #jumbo{
@@ -29,17 +38,14 @@ html{
   }
   background-size: cover;
 
-  &#logoContainer{
+  & #logoContainer{
     flex-direction:column;
-    // align-items: baseline;
     padding-bottom: 6rem;
-    // outline: 3px solid green;
   }
   // PART: _hyggeLogo.scss
 }
 //#2
 .cardContainer{
-  // height: 80rem;
   min-height: 40rem;
   @include flexbox();
   justify-content: center;
@@ -82,9 +88,24 @@ html{
 }
 //#2.2
 #gallery{
+  @include flexbox();
+  justify-content: center;
+  align-items: center;
   background: pink;
+  & #Myaccordion{
+    width: 30%;
+    flex-direction:column;
+    align-items:center;
+    text-align: center;
+  }
   & #photos{
+    width: 70%;
+    flex-direction:column;
+    align-items:center;
+    text-align: center;
+    img{
 
+    }
   }
 }
 //#2.3
