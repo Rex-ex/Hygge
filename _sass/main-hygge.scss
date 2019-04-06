@@ -91,7 +91,7 @@ html{
   @include flexbox();
   justify-content: center;
   align-items: center;
-  background: pink;
+  background: $palette4;
   & #Myaccordion{
     width: 30%;
     flex-direction:column;
@@ -110,7 +110,7 @@ html{
 }
 //#2.3
 #productInfo{
-  background: lightblue;
+  background: $palette2;
 
   & #wash{
 
@@ -118,7 +118,7 @@ html{
 }
 //#2.4
 #contact{
-  background: grey;
+  background: $palette3;
   & #information{
 
   }

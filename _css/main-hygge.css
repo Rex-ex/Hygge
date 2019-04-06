@@ -75,8 +75,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 #logoZMA .letterAnim {
-  fill: #2f8e95;
-  stroke: #2f8e95;
+  fill: #44a6a6;
+  stroke: #44a6a6;
   stroke-dasharray: 1800;
   opacity: 1;
   -webkit-animation-name: step;
@@ -108,10 +108,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     opacity: 1;
   }
   90% {
-    fill: rgba(47, 142, 149, 0);
+    fill: rgba(68, 166, 166, 0);
   }
   100% {
-    fill: #2f8e95;
+    fill: #44a6a6;
     stroke-dashoffset: 0;
   }
 }
@@ -334,7 +334,7 @@ html {
 }
 
 #welcome {
-  background: #2f8e95;
+  background: #44a6a6;
 }
 
 #gallery {
@@ -345,7 +345,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: pink;
+  background: #f2cda0;
 }
 
 #gallery #Myaccordion {
@@ -363,9 +363,9 @@ html {
 }
 
 #productInfo {
-  background: lightblue;
+  background: #3b7d8c;
 }
 
 #contact {
-  background: grey;
+  background: #1f3740;
 }
