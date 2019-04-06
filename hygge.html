@@ -88,7 +88,7 @@
           <div class="card">
             <div class="card-header" id="headingOne">
               <h5 class="mb-0">
-                <button class="btn btn-light btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <button id="btnWoman" class="btn btn-light btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                 Damskie
                 </button>
               </h5>
@@ -107,7 +107,7 @@
           <div class="card">
             <div class="card-header" id="headingTwo">
               <h5 class="mb-0">
-                <button class="btn btn-light btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <button id="btnMan" class="btn btn-light btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                 Męskie
                 </button>
               </h5>
@@ -125,7 +125,7 @@
           <div class="card">
             <div class="card-header" id="headingThree">
               <h5 class="mb-0">
-                <button class="btn btn-light btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <button id="btnPreg" class="btn btn-light btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 Ciążowe
                 </button>
               </h5>
@@ -143,7 +143,7 @@
           <div class="card">
             <div class="card-header" id="headingFour">
               <h5 class="mb-0">
-                <button class="btn btn-light btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <button id="btnKids" class="btn btn-light btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                 Dziecięce
                 </button>
               </h5>
@@ -161,7 +161,7 @@
           <div class="card">
             <div class="card-header" id="headingFive">
               <h5 class="mb-0">
-                <button class="btn btn-light btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                <button id="btnCustom" class="btn btn-light btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                 Na&nbsp;zamówienie
                 </button>
               </h5>
@@ -181,23 +181,52 @@
 
         <!-- fancybox -->
         <div id="photos">
-          <div id="photoWoman">
-            <a href="img/gallery/woman1.jpg" data-fancybox="gallery" data-caption="">
+
+          <div id="photoWoman" class="photoCategory">
+            <a href="img/gallery/woman1.jpg" data-fancybox="gallery" data-caption="" data-TSsize="L">
             	<img src="img/gallery/woman1_thb.jpg" alt="" />
             </a>
-            <a href="img/gallery/woman2.jpg" data-fancybox="gallery" data-caption="">
+            <a href="img/gallery/woman2.jpg" data-fancybox="gallery" data-caption="" data-TSsize="S">
             	<img src="img/gallery/woman2_thb.jpg" alt="" />
             </a>
-            <a href="img/gallery/woman3.jpg" data-fancybox="gallery" data-caption="">
+            <a href="img/gallery/woman3.jpg" data-fancybox="gallery" data-caption="" data-TSsize="M">
             	<img src="img/gallery/woman3_thb.jpg" alt="" />
             </a>
           </div>
-          <div id="photoMan">
-            <a href="img/gallery/man1.jpg" data-fancybox="gallery" data-caption="">
+
+          <div id="photoMan" class="photoCategory">
+            <a href="img/gallery/man1.jpg" data-fancybox="gallery" data-caption="" data-TSsize="xL">
             	<img src="img/gallery/man1_thb.jpg" alt="" />
             </a>
-            <a href="img/gallery/man2.jpg" data-fancybox="gallery" data-caption="">
+            <a href="img/gallery/man2.jpg" data-fancybox="gallery" data-caption="" data-TSsize="L">
             	<img src="img/gallery/man2_thb.jpg" alt="" />
+            </a>
+          </div>
+
+          <div id="photoPreg" class="photoCategory">
+            <a href="img/gallery/pregnancy1.jpg" data-fancybox="gallery" data-caption="" data-TSsize="L">
+              <img src="img/gallery/pregnancy1_thb.jpg" alt="" />
+            </a>
+            <a href="img/gallery/pregnancy2.jpg" data-fancybox="gallery" data-caption="" data-TSsize="S">
+              <img src="img/gallery/pregnancy2_thb.jpg" alt="" />
+            </a>
+            <a href="img/gallery/pregnancy3.jpg" data-fancybox="gallery" data-caption="" data-TSsize="M">
+              <img src="img/gallery/pregnancy3_thb.jpg" alt="" />
+            </a>
+            <a href="img/gallery/pregnancy4.jpg" data-fancybox="gallery" data-caption="" data-TSsize="M">
+              <img src="img/gallery/pregnancy4_thb.jpg" alt="" />
+            </a>
+          </div>
+
+          <div id="photoKids" class="photoCategory">
+            <a href="img/gallery/kids1.jpg" data-fancybox="gallery" data-caption="" data-TSsize="104">
+              <img src="img/gallery/kids1_thb.jpg" alt="" />
+            </a>
+          </div>
+
+          <div id="photoCustom" class="photoCategory">
+            <a href="img/gallery/custom1.jpg" data-fancybox="gallery" data-caption="" data-TSsize="L">
+              <img src="img/gallery/custom1_thb.jpg" alt="" />
             </a>
           </div>
 
@@ -233,4 +262,6 @@
   <!-- fancybox options -->
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/fancyboxOptions.js"></script>
+  <!-- Gallery buttons -->
+  <script src="js/btnGallery.js"></script>
 </html>
