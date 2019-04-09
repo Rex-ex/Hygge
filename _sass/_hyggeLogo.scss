@@ -1,5 +1,6 @@
 @import "_letStyles";
 @import "_animations_mxn";
+@import "_media-queries_mxn";
 
 #logoZMA{
   // XS
@@ -17,8 +18,8 @@
   }
   // LOVE
   & .letterAnim{
-    fill: $logoColor;
-    stroke: $logoColor;
+    fill: $palette1-Light;
+    stroke: $palette1-Light;
     stroke-dasharray: 1800;
     opacity: 1;
     @include animation(step, 3s, cubic-bezier(0,.23,1,.1));
@@ -34,10 +35,10 @@
         opacity: 1;
       }
       90%{
-        fill: $logoColor-NotA;
+        fill: $palette1-Light-NotA;
       }
       100%{
-        fill: $logoColor;
+        fill: $palette1-Light;
         stroke-dashoffset: 0;
       }
     }
