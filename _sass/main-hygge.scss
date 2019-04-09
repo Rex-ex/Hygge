@@ -6,6 +6,7 @@
 @import "_hyggeLogo";
 @import "_letStyles";
 @import "_boxsizing";
+@import "_mouseScrollAnim";
 @import "test_rwd";
 // #0
 html{
@@ -22,8 +23,9 @@ html{
 }
 //#1
 #jumbo{
-  @include flexbox();
   height: 100vh;
+  @include flexbox();
+  flex-direction:column;
   justify-content: center;
   align-items: center;
   // XS
@@ -39,8 +41,8 @@ html{
   background-size: cover;
 
   & #logoContainer{
-    flex-direction:column;
-    padding-bottom: 6rem;
+     align-self: center
+
   }
   // PART: _hyggeLogo.scss
 }
@@ -52,14 +54,30 @@ html{
   align-items: center;
   font-family: 'Raleway', sans-serif, 'Calibri';
   font-size: 2rem;
-  color: #FFF;
+
+
 }
 .centeredContent{
   width: 90%;
   flex-direction:column;
   align-items:center;
   text-align: center;
-  line-height: 2rem;
+  line-height: 3rem;
+
+  @include respond-above(xs){
+  width: 70%;
+  line-height: 3rem;
+  }
+
+  @include respond-above(sm){
+  width: 70%;
+  line-height: 4rem;
+  }
+
+  @include respond-above(md){
+  width: 60%;
+  line-height: 4rem;
+  }
 
   @include respond-above(lg){
   width: 50%;
@@ -68,8 +86,8 @@ html{
 }
 //#2.1
 #welcome{
-  background:$palette1-Light;
-
+  background:$palette4-Light;
+  color: $palette4-Dark;
   & #desc{
 
   }
@@ -79,8 +97,8 @@ html{
   @include flexbox();
   justify-content: center;
   align-items: center;
-  background: $palette4-Light;
-  color: $palette1-Light;
+  background: $palette5-Light;
+  color: $palette5-Dark;
   & #Myaccordion{
     width: 30%;
     flex-direction:column;
@@ -107,8 +125,7 @@ html{
 //#2.3
 #productInfo{
   background: $palette2-Light;
-
-
+  color: $palette2-Dark;
 
   & #wash{
 
@@ -116,8 +133,23 @@ html{
 }
 //#2.4
 #contact{
+  position: relative;
   background: $palette3-Light;
+  color: $palette3-Dark;
   & #information{
+    z-index: 20;
 
+  }
+  .bkg{
+    position: absolute;
+    top: 4rem;
+    // right: 0;
+    width: 40rem;;
+    height: 40rem;
+    // outline: 2px green solid;
+    background-image: url("../icons/splash.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 10;
   }
 }

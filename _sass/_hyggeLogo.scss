@@ -18,8 +18,8 @@
   }
   // LOVE
   & .letterAnim{
-    fill: $palette1-Light;
-    stroke: $palette1-Light;
+    fill: $palette4-Light;
+    stroke: $palette4-Light;
     stroke-dasharray: 1800;
     opacity: 1;
     @include animation(step, 3s, cubic-bezier(0,.23,1,.1));
@@ -35,10 +35,10 @@
         opacity: 1;
       }
       90%{
-        fill: $palette1-Light-NotA;
+        fill: $palette4-Light-NotA;
       }
       100%{
-        fill: $palette1-Light;
+        fill: $palette4-Light;
         stroke-dashoffset: 0;
       }
     }
