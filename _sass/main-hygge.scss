@@ -2,58 +2,90 @@
 @import "compass/reset";
 @import "_media-queries_mxn";
 @import "_flexbox_mxn";
-@import "_gridCSSLayout_mxn";
+// @import "_gridCSSLayout_mxn";
 @import "_hyggeLogo";
 @import "_letStyles";
 @import "_boxsizing";
+@import "_mouseScrollAnim";
 @import "test_rwd";
-
+// #0
 html{
   height: 100%;
 }
+.wrapper{
+  width: 100%;
+  a, a:hover{
+    text-decoration: none;
+    color:inherit;
+  }
+
+}
 //#1
 #jumbo{
-  @include flexbox();
   height: 100vh;
+  @include flexbox();
+  flex-direction:column;
   justify-content: center;
   align-items: center;
   // XS
-  background-image: url("../img/logo/woodTableXS.jpg");
+  // background-image: url("../img/jumbo/woodTableXS.jpg");
+  background-image: url("../img/jumbo/whiteWood.jpg");
   // MD
-  @include respond-above(xs){
-  background-image: url("../img/logo/woodTableMD.jpg");
-  }
+  // @include respond-above(xs){
+  // background-image: url("../img/jumbo/woodTableMD.jpg");
+  // }
   // LG
-  @include respond-above(md){
-  background-image: url("../img/logo/woodTableLG.jpg");
-  }
+  // @include respond-above(md){
+  // background-image: url("../img/jumbo/woodTableLG.jpg");
+  // }
   background-size: cover;
 
-  &#logoContainer{
-    flex-direction:column;
-    // align-items: baseline;
-    padding-bottom: 6rem;
-    // outline: 3px solid green;
+  & #logoContainer{
+     align-self: center
+
   }
   // PART: _hyggeLogo.scss
 }
 //#2
 .cardContainer{
-  // height: 80rem;
-  min-height: 40rem;
+  position: relative;
   @include flexbox();
   justify-content: center;
   align-items: center;
+  min-height: 45rem;
   font-family: 'Raleway', sans-serif, 'Calibri';
   font-size: 2rem;
-  font-weight: bold;
+
+
+}
+.bkg{
+  position: absolute;
+  top: 4rem;
+  width: 40rem;
+  height: 40rem;
+  z-index: 10;
 }
 .centeredContent{
   width: 90%;
   flex-direction:column;
   align-items:center;
   text-align: center;
-  line-height: 2rem;
+  line-height: 3rem;
+  z-index: 20;
+  @include respond-above(xs){
+  width: 70%;
+  line-height: 3rem;
+  }
+
+  @include respond-above(sm){
+  width: 70%;
+  line-height: 4rem;
+  }
+
+  @include respond-above(md){
+  width: 60%;
+  line-height: 4rem;
+  }
 
   @include respond-above(lg){
   width: 50%;
@@ -62,34 +94,46 @@ html{
 }
 //#2.1
 #welcome{
-  background:$logoColor;
-  // position: relative;
-    // & #welcomeDesc::before{
-  //   content: "";
-  //   position: absolute;
-  //   top: -20vh;
-  //   right: 0;
-  //   width: 100%;
-  //   height: 20vh;
-  //   background-image: url("../img/corner.svg");
-  //   // background-size: contain;
-  //   background-repeat: no-repeat;
-  //   // outline: 1px red solid;
-  // }
+  background:$ZmaTurquoise;
+  color: $ZmaWhite-special;
   & #desc{
 
   }
 }
 //#2.2
 #gallery{
-  background: pink;
-  & #photos{
-
+  @include flexbox();
+  justify-content: center;
+  align-items: center;
+  background: $ZmaMint;
+  color: $ZmaGreyDark;
+  & #Myaccordion{
+    width: 30%;
+    flex-direction:column;
+    align-items:center;
+    text-align: center;
+    // temporary inactive link
+    a{
+      color: grey;
+      pointer-events: none;
+      cursor: default;
+    }
   }
+  & #photos{
+    width: 70%;
+    flex-direction:column;
+    align-items:center;
+    text-align: center;
+    img{
+
+    }
+  }
+
 }
 //#2.3
 #productInfo{
-  background: lightblue;
+  background: $ZmaGreyDark;
+  color: $ZmaGreyLight;
 
   & #wash{
 
@@ -97,8 +141,17 @@ html{
 }
 //#2.4
 #contact{
-  background: grey;
+  background: $ZmaGreyLight;
+  color: $ZmaGreyDark;
+  #splash{
+    background-image: url("../icons/splash.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    // outline: 2px green solid;
+  }
   & #information{
 
+
   }
+
 }
