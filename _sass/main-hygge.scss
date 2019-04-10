@@ -19,7 +19,6 @@ html{
     color:inherit;
   }
 
-
 }
 //#1
 #jumbo{
@@ -29,15 +28,16 @@ html{
   justify-content: center;
   align-items: center;
   // XS
-  background-image: url("../img/logo/woodTableXS.jpg");
+  // background-image: url("../img/jumbo/woodTableXS.jpg");
+  background-image: url("../img/jumbo/whiteWood.jpg");
   // MD
-  @include respond-above(xs){
-  background-image: url("../img/logo/woodTableMD.jpg");
-  }
+  // @include respond-above(xs){
+  // background-image: url("../img/jumbo/woodTableMD.jpg");
+  // }
   // LG
-  @include respond-above(md){
-  background-image: url("../img/logo/woodTableLG.jpg");
-  }
+  // @include respond-above(md){
+  // background-image: url("../img/jumbo/woodTableLG.jpg");
+  // }
   background-size: cover;
 
   & #logoContainer{
@@ -48,14 +48,22 @@ html{
 }
 //#2
 .cardContainer{
-  min-height: 45rem;
+  position: relative;
   @include flexbox();
   justify-content: center;
   align-items: center;
+  min-height: 45rem;
   font-family: 'Raleway', sans-serif, 'Calibri';
   font-size: 2rem;
 
 
+}
+.bkg{
+  position: absolute;
+  top: 4rem;
+  width: 40rem;
+  height: 40rem;
+  z-index: 10;
 }
 .centeredContent{
   width: 90%;
@@ -63,7 +71,7 @@ html{
   align-items:center;
   text-align: center;
   line-height: 3rem;
-
+  z-index: 20;
   @include respond-above(xs){
   width: 70%;
   line-height: 3rem;
@@ -86,8 +94,8 @@ html{
 }
 //#2.1
 #welcome{
-  background:$palette4-Light;
-  color: $palette4-Dark;
+  background:$ZmaTurquoise;
+  color: $ZmaWhite-special;
   & #desc{
 
   }
@@ -97,8 +105,8 @@ html{
   @include flexbox();
   justify-content: center;
   align-items: center;
-  background: $palette5-Light;
-  color: $palette5-Dark;
+  background: $ZmaMint;
+  color: $ZmaGreyDark;
   & #Myaccordion{
     width: 30%;
     flex-direction:column;
@@ -124,8 +132,8 @@ html{
 }
 //#2.3
 #productInfo{
-  background: $palette2-Light;
-  color: $palette2-Dark;
+  background: $ZmaGreyDark;
+  color: $ZmaGreyLight;
 
   & #wash{
 
@@ -133,23 +141,17 @@ html{
 }
 //#2.4
 #contact{
-  position: relative;
-  background: $palette3-Light;
-  color: $palette3-Dark;
-  & #information{
-    z-index: 20;
-
-  }
-  .bkg{
-    position: absolute;
-    top: 4rem;
-    // right: 0;
-    width: 40rem;;
-    height: 40rem;
-    // outline: 2px green solid;
+  background: $ZmaGreyLight;
+  color: $ZmaGreyDark;
+  #splash{
     background-image: url("../icons/splash.svg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    z-index: 10;
+    // outline: 2px green solid;
   }
+  & #information{
+
+
+  }
+
 }
