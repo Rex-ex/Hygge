@@ -41,16 +41,20 @@ body {
 }
 
 .scroll-msg-container {
-  // align-self: flex-end;
-  // position: fixed;
-  // top: 50%;
-  // left: 50%;
+  align-self: flex-end;
+  position: absolute;
+  bottom: 2%;
+  left: 49%;
 
-  // width: $mouse_width + $border_width*2;
-  // height: $mouse_height + $border_width*2;
+  @media only screen and (max-height: 42rem){
+      display: none;
+  }
+
+  width: $mouse_width + $border_width*2;
+  height: $mouse_height + $border_width*2;
   // margin-top: - ($mouse_height + $border_width * 2) * 0.5;
   // margin-left: - ($mouse_width + $border_width * 2) * 0.5;
-  padding-top: 1.5rem;
+  // padding-top: 1.5rem;
   @include animation (mouseAppear 7s linear)
   @keyframes mouseAppear{
     0%{

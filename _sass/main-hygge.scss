@@ -18,7 +18,6 @@ html{
     text-decoration: none;
     color:inherit;
   }
-
 }
 //#1
 #jumbo{
@@ -48,21 +47,18 @@ html{
 }
 //#2
 .cardContainer{
-  position: relative;
   @include flexbox();
   justify-content: center;
   align-items: center;
+  position: relative;
   min-height: 45rem;
   font-family: 'Raleway', sans-serif, 'Calibri';
   font-size: 2rem;
 
 
 }
-.bkg{
+.bkgContainer{
   position: absolute;
-  top: 4rem;
-  width: 40rem;
-  height: 40rem;
   z-index: 10;
 }
 .centeredContent{
@@ -96,6 +92,15 @@ html{
 #welcome{
   background:$ZmaTurquoise;
   color: $ZmaWhite-special;
+
+  & #bkgFlower{
+    top: 4rem;
+    width: 40rem;
+    height: 40rem;
+    // background-image: url("../icons/splash.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
   & #desc{
 
   }
@@ -105,7 +110,7 @@ html{
   @include flexbox();
   justify-content: center;
   align-items: center;
-  background: $ZmaMint;
+  background: $ZmaWhite-special;
   color: $ZmaGreyDark;
   & #Myaccordion{
     width: 30%;
@@ -119,13 +124,13 @@ html{
       cursor: default;
     }
   }
-  & #photos{
+  & #photosCointainer{
     width: 70%;
     flex-direction:column;
     align-items:center;
     text-align: center;
     img{
-
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
   }
 
@@ -134,7 +139,14 @@ html{
 #productInfo{
   background: $ZmaGreyDark;
   color: $ZmaGreyLight;
-
+  & #bkgWash{
+    top: 4rem;
+    width: 40rem;
+    height: 40rem;
+    // background-image: url("../icons/splash.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
   & #wash{
 
   }
@@ -143,7 +155,10 @@ html{
 #contact{
   background: $ZmaGreyLight;
   color: $ZmaGreyDark;
-  #splash{
+  & #bkgSplash{
+    top: 4rem;
+    width: 40rem;
+    height: 40rem;
     background-image: url("../icons/splash.svg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
