@@ -7,7 +7,7 @@
 @import "_letStyles";
 @import "_boxsizing";
 @import "_mouseScrollAnim";
-@import "test_rwd";
+// @import "test_rwd";
 // #0
 html{
   height: 100%;
@@ -66,11 +66,13 @@ html{
   flex-direction:column;
   align-items:center;
   text-align: center;
+  padding: 3rem;
   line-height: 3rem;
   z-index: 20;
   @include respond-above(xs){
   width: 70%;
   line-height: 3rem;
+
   }
 
   @include respond-above(sm){
@@ -90,19 +92,24 @@ html{
 }
 //#2.1
 #welcome{
-  background:$ZmaTurquoise;
-  color: $ZmaWhite-special;
+  background:$ZmaWhite-special;
+  color: $ZmaGreyDark;
 
   & #bkgFlower{
-    top: 4rem;
-    width: 40rem;
+    top: 0;
+    // left: 0;
+    width: 100%;
     height: 40rem;
-    // background-image: url("../icons/splash.svg");
+    background-image: url("../img/bkg/flower1.jpg");
+    // background-position: left 0px, right 0px;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+
+    // outline: 2px green solid;
+
   }
   & #desc{
-
+    // background: $ZmaWhite-special;
   }
 }
 //#2.2
@@ -110,6 +117,7 @@ html{
   @include flexbox();
   justify-content: center;
   align-items: center;
+  min-height: 60rem;
   background: $ZmaWhite-special;
   color: $ZmaGreyDark;
   & #Myaccordion{
@@ -117,12 +125,17 @@ html{
     flex-direction:column;
     align-items:center;
     text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     // temporary inactive link
     a{
-      color: grey;
+      color: $ZmaGreyDark;
       pointer-events: none;
       cursor: default;
     }
+    // &:before{
+    //   content: "";
+    //   background-image: url("../wybierz.svg");
+    // }
   }
   & #photosCointainer{
     width: 70%;
@@ -137,35 +150,46 @@ html{
 }
 //#2.3
 #productInfo{
-  background: $ZmaGreyDark;
-  color: $ZmaGreyLight;
+  min-height: 30rem;
+  margin-bottom: 6rem;
+  background: $ZmaWhite-special;
+  color: $ZmaGreyDark;
   & #bkgWash{
-    top: 4rem;
-    width: 40rem;
-    height: 40rem;
-    // background-image: url("../icons/splash.svg");
+    top: 0;
+    // left: 0;
+    width: 24rem;
+    height: 24rem;
+    opacity: 0.05;
+    background-image: url("../icons/rinse.svg");
+    // background-position: left 0px, right 0px;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    z-index: 30;
   }
   & #wash{
+
 
   }
 }
 //#2.4
 #contact{
-  background: $ZmaGreyLight;
+  min-height: 30rem;
+  background: white;
   color: $ZmaGreyDark;
   & #bkgSplash{
-    top: 4rem;
-    width: 40rem;
-    height: 40rem;
-    background-image: url("../icons/splash.svg");
+    top: -6rem;
+    width: 45rem;
+    height: 45rem;
+    background-image: url("../img/bkg/paint.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     // outline: 2px green solid;
   }
   & #information{
-
+    font-weight: 900;
+    a{
+      color: $ZmaTurquoise;
+    }
 
   }
 
