@@ -11,12 +11,18 @@
 // #0
 html{
   height: 100%;
+  background: $ZmaWhite-special;
 }
 .wrapper{
   width: 100%;
+  background: $ZmaWhite-special;
+  overflow: hidden;
   a, a:hover{
     text-decoration: none;
     color:inherit;
+  }
+  h1, h2{
+    font-size: 2.25rem;
   }
 }
 //#1
@@ -51,65 +57,66 @@ html{
   justify-content: center;
   align-items: center;
   position: relative;
+  padding: 4rem 0 4rem 0;
+  // margin: 6rem 0 6rem 0;
   min-height: 45rem;
   font-family: 'Raleway', sans-serif, 'Calibri';
-  font-size: 2rem;
-
-
+  font-size: 1.5rem;
 }
 .bkgContainer{
   position: absolute;
   z-index: 10;
 }
 .centeredContent{
-  width: 90%;
+  width: 75%;
   flex-direction:column;
   align-items:center;
   text-align: center;
-  padding: 3rem;
   line-height: 3rem;
+  opacity: 1;
   z-index: 20;
   @include respond-above(xs){
   width: 70%;
   line-height: 3rem;
-
+  font-size: 2rem;
   }
 
   @include respond-above(sm){
   width: 70%;
   line-height: 4rem;
+  font-size: 2rem;
   }
 
   @include respond-above(md){
   width: 60%;
   line-height: 4rem;
+  font-size: 2rem;
   }
 
   @include respond-above(lg){
   width: 50%;
-  line-height: 5rem;
+  line-height: 4rem;
+  font-size: 2rem;
   }
 }
 //#2.1
 #welcome{
-  background:$ZmaWhite-special;
+  // background:$ZmaWhite-special;
   color: $ZmaGreyDark;
+  background-image: url("../img/bkg/flower1.jpg");
+  background-size: 100% 100%;
+  background-repeat: repeat-y;
 
   & #bkgFlower{
-    top: 0;
-    // left: 0;
-    width: 100%;
-    height: 40rem;
-    background-image: url("../img/bkg/flower1.jpg");
-    // background-position: left 0px, right 0px;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-
-    // outline: 2px green solid;
-
+    // top: 0;
+    // width: 100%;
+    // height: 40rem;
+    // background-image: url("../img/bkg/flower1.jpg");
+    // background-size: 100% 100%;
+    // background-repeat: repeat-y;
   }
   & #desc{
-    // background: $ZmaWhite-special;
+
   }
 }
 //#2.2
@@ -151,18 +158,18 @@ html{
 //#2.3
 #productInfo{
   min-height: 30rem;
-  margin-bottom: 6rem;
-  background: $ZmaWhite-special;
+  // background: $ZmaWhite-special;
+  background-image: url("../img/bkg/flower1.jpg");
+  background-size: 100% 100%;
+  background-repeat: repeat-y;
   color: $ZmaGreyDark;
   & #bkgWash{
-    top: 0;
-    // left: 0;
     width: 24rem;
     height: 24rem;
     opacity: 0.05;
     background-image: url("../icons/rinse.svg");
-    // background-position: left 0px, right 0px;
-    background-size: 100% 100%;
+    background-size: 80% 80%;
+    background-position: center center;
     background-repeat: no-repeat;
     z-index: 30;
   }
@@ -174,7 +181,7 @@ html{
 //#2.4
 #contact{
   min-height: 30rem;
-  background: white;
+  margin-top: 12rem;
   color: $ZmaGreyDark;
   & #bkgSplash{
     top: -6rem;
@@ -183,14 +190,11 @@ html{
     background-image: url("../img/bkg/paint.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    // outline: 2px green solid;
+
   }
   & #information{
     font-weight: 900;
-    a{
-      color: $ZmaTurquoise;
-    }
-
+    a, address{font-size: 1.5rem;}
+    a{color: $ZmaTurquoise;}
   }
-
 }
