@@ -8,7 +8,8 @@
 @import "_boxsizing";
 @import "_mouseScrollAnim";
 // @import "test_rwd";
-// #0
+
+//#0 GLOBAL
 html{
   height: 100%;
   background: $ZmaWhite-special;
@@ -25,47 +26,24 @@ html{
     font-size: 2.25rem;
   }
 }
-//#1
-#jumbo{
-  height: 100vh;
-  @include flexbox();
-  flex-direction:column;
-  justify-content: center;
-  align-items: center;
-  // XS
-  // background-image: url("../img/jumbo/woodTableXS.jpg");
-  background-image: url("../img/jumbo/whiteWood.jpg");
-  // MD
-  // @include respond-above(xs){
-  // background-image: url("../img/jumbo/woodTableMD.jpg");
-  // }
-  // LG
-  // @include respond-above(md){
-  // background-image: url("../img/jumbo/woodTableLG.jpg");
-  // }
-  background-size: cover;
-
-  & #logoContainer{
-     align-self: center
-
-  }
-  // PART: _hyggeLogo.scss
-}
-//#2
 .cardContainer{
-  @include flexbox();
-  justify-content: center;
-  align-items: center;
   position: relative;
   padding: 4rem 0 4rem 0;
-  // margin: 6rem 0 6rem 0;
   min-height: 45rem;
+  background: $ZmaWhite-special;
   font-family: 'Raleway', sans-serif, 'Calibri';
   font-size: 1.5rem;
 }
 .bkgContainer{
   position: absolute;
   z-index: 10;
+}
+// FLEXBOX elements
+.flexContainer{
+  @include flexbox();
+  @include justify-content(center);
+  @include align-items(center);
+  padding-top: 5rem;
 }
 .centeredContent{
   width: 75%;
@@ -99,6 +77,33 @@ html{
   font-size: 2rem;
   }
 }
+// END-FLEXBOX elements
+// END-GLOBAL
+
+//#1
+#jumbo{
+  height: 100vh;
+  @include flexbox();
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+  // XS
+  // background-image: url("../img/jumbo/woodTableXS.jpg");
+  background-image: url("../img/jumbo/whiteWood.jpg");
+  // MD
+  // @include respond-above(xs){
+  // background-image: url("../img/jumbo/woodTableMD.jpg");
+  // }
+  // LG
+  // @include respond-above(md){
+  // background-image: url("../img/jumbo/woodTableLG.jpg");
+  // }
+  background-size: cover;
+  & #logoContainer{
+
+  }
+  // @import: _hyggeLogo.scss
+}
 //#2.1
 #welcome{
   // background:$ZmaWhite-special;
@@ -108,12 +113,7 @@ html{
   background-repeat: repeat-y;
 
   & #bkgFlower{
-    // top: 0;
-    // width: 100%;
-    // height: 40rem;
-    // background-image: url("../img/bkg/flower1.jpg");
-    // background-size: 100% 100%;
-    // background-repeat: repeat-y;
+
   }
   & #desc{
 
@@ -121,35 +121,29 @@ html{
 }
 //#2.2
 #gallery{
-  @include flexbox();
-  justify-content: center;
-  align-items: center;
-  min-height: 60rem;
-  background: $ZmaWhite-special;
+  min-height: 45rem;
   color: $ZmaGreyDark;
-  & #Myaccordion{
-    width: 30%;
-    flex-direction:column;
-    align-items:center;
-    text-align: center;
+  & #Mybuttons{
+    @include flex-direction(row);
+    width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    // temporary inactive link
-    a{
-      color: $ZmaGreyDark;
-      pointer-events: none;
-      cursor: default;
+    @include respond-above(xs){
+    width: 90%;
     }
-    // &:before{
-    //   content: "";
-    //   background-image: url("../wybierz.svg");
-    // }
+    @include respond-above(md){
+    width: 80%;
+    }
+    @include respond-above(lg){
+    width: 70%;
+    }
+
   }
   & #photosCointainer{
-    width: 70%;
-    flex-direction:column;
-    align-items:center;
-    text-align: center;
+
+
+    padding: 2rem 0.5rem 5rem 0.5rem;
     img{
+      max-width:12rem;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
   }
@@ -158,7 +152,6 @@ html{
 //#2.3
 #productInfo{
   min-height: 30rem;
-  // background: $ZmaWhite-special;
   background-image: url("../img/bkg/flower1.jpg");
   background-size: 100% 100%;
   background-repeat: repeat-y;
@@ -168,7 +161,7 @@ html{
     height: 24rem;
     opacity: 0.05;
     background-image: url("../icons/rinse.svg");
-    background-size: 80% 80%;
+    background-size: 70% 70%;
     background-position: center center;
     background-repeat: no-repeat;
     z-index: 30;
@@ -180,19 +173,20 @@ html{
 }
 //#2.4
 #contact{
-  min-height: 30rem;
-  margin-top: 12rem;
+  min-height: 45rem;
   color: $ZmaGreyDark;
+  overflow: hidden;
   & #bkgSplash{
-    top: -6rem;
+    top: 6rem;
     width: 45rem;
     height: 45rem;
     background-image: url("../img/bkg/paint.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-
   }
   & #information{
+    position: absolute;
+    top: 19rem;
     font-weight: 900;
     a, address{font-size: 1.5rem;}
     a{color: $ZmaTurquoise;}

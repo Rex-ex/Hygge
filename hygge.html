@@ -79,7 +79,7 @@
     </header>
 
     <section>
-      <div id="welcome" class="cardContainer">
+      <div id="welcome" class="cardContainer flexContainer">
         <div id="bkgFlower" class="bkgContainer">
         </div>
         <div id="desc" class="centeredContent">
@@ -90,169 +90,83 @@
     </section>
 
     <section>
-      <div id="gallery" class="cardContainer">
-        <!-- accordian bootstrap -->
-
-        <div id="Myaccordion" class="accordion">
-          <!-- #1 collapse card -->
-          <div class="card">
-            <div id="headingOne" class="card-header">
-              <h5 class="mb-0">
-                <button id="btnWoman" class="btn btn-light btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                Damskie
-                </button>
-              </h5>
-            </div>
-
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#Myaccordion">
-              <div class="card-body">
-                <p><a href="#">S</a></p>
-                <p><a href="#">M</a></p>
-                <p><a href="#">L</a></p>
-                <p><a href="#">XL</a></p>
-              </div>
-            </div>
+      <div id="gallery">
+        <!-- buttons bootstrap -->
+        <div class="flexContainer">
+          <div id="Mybuttons" class="btn-group">
+            <button type="button" id="btnWoman" class="btn btn-info">Damskie</button>
+            <button type="button" id="btnMan" class="btn btn-info">Męskie</button>
+            <button type="button" id="btnPreg" class="btn btn-info">Ciążowe</button>
+            <button type="button" id="btnKids" class="btn btn-info">Dziecięce</button>
+            <button type="button" id="btnCustom" class="btn btn-info">Spersonalizowane</button>
           </div>
-          <!-- #2 collapse card -->
-          <div class="card">
-            <div id="headingTwo" class="card-header">
-              <h5 class="mb-0">
-                <button id="btnMan" class="btn btn-light btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Męskie
-                </button>
-              </h5>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#Myaccordion">
-              <div class="card-body">
-                <p><a href="#">S</a></p>
-                <p><a href="#">M</a></p>
-                <p><a href="#">L</a></p>
-                <p><a href="#">XL</a></p>
-              </div>
-            </div>
-          </div>
-          <!-- #3 collapse card -->
-          <div class="card">
-            <div id="headingThree" class="card-header">
-              <h5 class="mb-0">
-                <button id="btnPreg" class="btn btn-light btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Ciążowe
-                </button>
-              </h5>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#Myaccordion">
-              <div class="card-body">
-                <p><a href="#">S</a></p>
-                <p><a href="#">M</a></p>
-                <p><a href="#">L</a></p>
-                <p><a href="#">XL</a></p>
-              </div>
-            </div>
-          </div>
-          <!-- #4 collapse card -->
-          <div class="card">
-            <div id="headingFour" class="card-header">
-              <h5 class="mb-0">
-                <button id="btnKids" class="btn btn-light btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                Dziecięce
-                </button>
-              </h5>
-            </div>
-            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#Myaccordion">
-              <div class="card-body">
-                <p><a href="#">98</a></p>
-                <p><a href="#">104</a></p>
-                <p><a href="#">110</a></p>
-                <p><a href="#">116</a></p>
-              </div>
-            </div>
-          </div>
-          <!-- #5 collapse card -->
-          <div class="card">
-            <div id="headingFive" class="card-header">
-              <h5 class="mb-0">
-                <button id="btnCustom" class="btn btn-light btn-lg collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                Na&nbsp;zamówienie
-                </button>
-              </h5>
-            </div>
-            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#Myaccordion">
-              <div class="card-body">
-                <p><a href="#">S</a></p>
-                <p><a href="#">M</a></p>
-                <p><a href="#">L</a></p>
-                <p><a href="#">XL</a></p>
-              </div>
-            </div>
-          </div>
-
         </div>
-        <!--END accordian bootstrap -->
+        <!--END buttons bootstrap -->
 
         <!-- fancybox -->
-        <div id="photosCointainer">
-
+        <div id="photosCointainer" class="flexContainer">
           <div id="photoWoman" class="photoCategory">
-            <a href="img/gallery/woman1.jpg" data-fancybox="gallery" data-caption="">
-            	<img src="img/gallery/woman1_thb.jpg" alt="" />
-            </a>
-            <a href="img/gallery/woman2.jpg" data-fancybox="gallery" data-caption="">
-            	<img src="img/gallery/woman2_thb.jpg" alt="" />
-            </a>
-            <a href="img/gallery/woman3.jpg" data-fancybox="gallery" data-caption="">
-            	<img src="img/gallery/woman3_thb.jpg" alt="" />
-            </a>
-          </div>
+              <a href="img/gallery/woman1.jpg" data-fancybox="gallery" data-caption="">
+              	<img src="img/gallery/woman1_thb.jpg" alt="" />
+              </a>
+              <a href="img/gallery/woman2.jpg" data-fancybox="gallery" data-caption="">
+              	<img src="img/gallery/woman2_thb.jpg" alt="" />
+              </a>
+              <a href="img/gallery/woman3.jpg" data-fancybox="gallery" data-caption="">
+              	<img src="img/gallery/woman3_thb.jpg" alt="" />
+              </a>
+            </div>
 
-          <div id="photoMan" class="photoCategory">
-            <a href="img/gallery/man1.jpg" data-fancybox="gallery" data-caption="">
-            	<img src="img/gallery/man1_thb.jpg" alt="" />
-            </a>
-            <a href="img/gallery/man2.jpg" data-fancybox="gallery" data-caption="">
-            	<img src="img/gallery/man2_thb.jpg" alt="" />
-            </a>
-          </div>
+            <div id="photoMan" class="photoCategory">
+              <a href="img/gallery/man1.jpg" data-fancybox="gallery" data-caption="">
+              	<img src="img/gallery/man1_thb.jpg" alt="" />
+              </a>
+              <a href="img/gallery/man2.jpg" data-fancybox="gallery" data-caption="">
+              	<img src="img/gallery/man2_thb.jpg" alt="" />
+              </a>
+            </div>
 
-          <div id="photoPreg" class="photoCategory">
-            <a href="img/gallery/pregnancy1.jpg" data-fancybox="gallery" data-caption="">
-              <img src="img/gallery/pregnancy1_thb.jpg" alt="" />
-            </a>
-            <a href="img/gallery/pregnancy2.jpg" data-fancybox="gallery" data-caption="">
-              <img src="img/gallery/pregnancy2_thb.jpg" alt="" />
-            </a>
-            <a href="img/gallery/pregnancy3.jpg" data-fancybox="gallery" data-caption="">
-              <img src="img/gallery/pregnancy3_thb.jpg" alt="" />
-            </a>
-            <a href="img/gallery/pregnancy4.jpg" data-fancybox="gallery" data-caption="">
-              <img src="img/gallery/pregnancy4_thb.jpg" alt="" />
-            </a>
-          </div>
+            <div id="photoPreg" class="photoCategory">
+              <a href="img/gallery/pregnancy1.jpg" data-fancybox="gallery" data-caption="">
+                <img src="img/gallery/pregnancy1_thb.jpg" alt="" />
+              </a>
+              <a href="img/gallery/pregnancy2.jpg" data-fancybox="gallery" data-caption="">
+                <img src="img/gallery/pregnancy2_thb.jpg" alt="" />
+              </a>
+              <a href="img/gallery/pregnancy3.jpg" data-fancybox="gallery" data-caption="">
+                <img src="img/gallery/pregnancy3_thb.jpg" alt="" />
+              </a>
+              <a href="img/gallery/pregnancy4.jpg" data-fancybox="gallery" data-caption="">
+                <img src="img/gallery/pregnancy4_thb.jpg" alt="" />
+              </a>
+            </div>
 
-          <div id="photoKids" class="photoCategory">
-            <a href="img/gallery/kids1.jpg" data-fancybox="gallery" data-caption="">
-              <img src="img/gallery/kids1_thb.jpg" alt="" />
-            </a>
-          </div>
+            <div id="photoKids" class="photoCategory">
+              <a href="img/gallery/kids1.jpg" data-fancybox="gallery" data-caption="">
+                <img src="img/gallery/kids1_thb.jpg" alt="" />
+              </a>
+            </div>
 
-          <div id="photoCustom" class="photoCategory">
-            <a href="img/gallery/custom1.jpg" data-fancybox="gallery" data-caption="">
-              <img src="img/gallery/custom1_thb.jpg" alt="" />
-            </a>
-            <a href="img/gallery/custom2a.jpg" data-fancybox="gallery" data-caption="">
-              <img src="img/gallery/custom2a_thb.jpg" alt="" />
-            </a>
-            <a href="img/gallery/custom2b.jpg" data-fancybox="gallery" data-caption="">
-              <img src="img/gallery/custom2b_thb.jpg" alt="" />
-            </a>
+            <div id="photoCustom" class="photoCategory">
+              <a href="img/gallery/custom1.jpg" data-fancybox="gallery" data-caption="">
+                <img src="img/gallery/custom1_thb.jpg" alt="" />
+              </a>
+              <a href="img/gallery/custom2a.jpg" data-fancybox="gallery" data-caption="">
+                <img src="img/gallery/custom2a_thb.jpg" alt="" />
+              </a>
+              <a href="img/gallery/custom2b.jpg" data-fancybox="gallery" data-caption="">
+                <img src="img/gallery/custom2b_thb.jpg" alt="" />
+              </a>
+            </div>
+
+          <!-- END fancybox -->
           </div>
         </div>
-        <!-- END fancybox -->
       </div>
-
     </section>
 
     <section>
-      <div id="productInfo" class="cardContainer">
+      <div id="productInfo" class="cardContainer flexContainer">
         <div id="bkgWash" class="bkgContainer">
         </div>
         <div id="wash" class="centeredContent">
@@ -263,14 +177,13 @@
     </section>
 
     <footer>
-      <div id="contact" class="cardContainer">
+      <div id="contact" class="cardContainer flexContainer">
         <div id="bkgSplash" class="bkgContainer">
         </div>
           <div id="information" class="centeredContent">
             <div id="informationStyle">
               <h2>Kontakt<h2>
                 <a href="mailto:zmaloveane@gmail.com">ZmaLOVEane@gmail.com</a>
-                <br>
                 <br>
                 <address>
                 Dane Firmy:<br>
@@ -283,11 +196,9 @@
           </div>
         </div>
     </footer>
-
-    <!-- <div id="test-RWD"></div> -->
   </div>
   </body>
-  <!-- <script src="main.js"></script> -->
+  <!-- jQuery, Bootstrap JS -->
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <!-- fancybox options -->
