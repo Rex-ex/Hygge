@@ -2,9 +2,9 @@
 @import "_letStyles";
 $background_color: $ZmaGreyDark;
 $mouse_color: $ZmaGreyDark;
-$mouse_width: 52px;
-$mouse_height: 100px;
-$border_width: 4px;
+$mouse_width: 3rem;
+$mouse_height: 6rem;
+$border_width: 0.25rem;
 
 @mixin keyframes($animationName) {
   @-webkit-keyframes #{$animationName} {
@@ -30,10 +30,6 @@ $border_width: 4px;
 
 $wheel_size: $border_width * 3;
 
-body {
-  background-color: $ZmaGreyDark;
-}
-
 @include keyframes(mouse-scroll) {
   0%   { top: 10%; opacity: 1; }
   80% { opacity: 1; }
@@ -41,10 +37,9 @@ body {
 }
 
 .scroll-msg-container {
-  align-self: flex-end;
   position: absolute;
-  bottom: 2%;
-  left: 49%;
+  bottom: 1%;
+  // left: 49%;
 
   @media only screen and (max-height: 42rem){
       display: none;
@@ -55,7 +50,7 @@ body {
   // margin-top: - ($mouse_height + $border_width * 2) * 0.5;
   // margin-left: - ($mouse_width + $border_width * 2) * 0.5;
   // padding-top: 1.5rem;
-  @include animation (mouseAppear 7s linear)
+  @include animation (mouseAppear 7s linear);
   @keyframes mouseAppear{
     0%{
       opacity: 0;
