@@ -82,13 +82,13 @@ html{
 .xsVisible{
   display: none;
   @include respond-below(xs){
-  display: inline-flex;
+  display: inline;
   }
 }
 .xsHide{
   display:none;
   @include respond-above(xs){
-  display: inline-flex;
+  display: inline;
   }
 }
 // END-RWD hide/visible
