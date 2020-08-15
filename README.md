@@ -1,5 +1,5 @@
 # zmaLOVEane
-I am currently working on this project | WWW=>Work in Progress
+Project abandoned for reasons attributable to the client
 
 ## Table of contents
 * [Project](#project)
@@ -13,7 +13,7 @@ zmaLOVEane
 (code name: Hygge)
 
 ## Status:
-Work in progress...
+Project abandoned for reasons attributable to the client
 
 ## Description:
 (soon)
